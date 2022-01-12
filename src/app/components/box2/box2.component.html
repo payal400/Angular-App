@@ -1,0 +1,26 @@
+<div class="container bg-light p-1 text-dark">
+  <h3>Child Component - {{uname}}</h3>
+  <button mat-raised-button class="bg-warning" (click)="passData()">Send data back to parent</button>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+    <ng-container matColumnDef="demo-firstname">
+      <th mat-header-cell *matHeaderCellDef> First Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="demo-lastname">
+      <th mat-header-cell *matHeaderCellDef> Last Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="demo-address">
+      <th mat-header-cell *matHeaderCellDef> Address </th>
+      <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+    </ng-container>
+    <ng-container matColumnDef="demo-dob">
+      <th mat-header-cell *matHeaderCellDef> DOB </th>
+      <td mat-cell *matCellDef="let element"> {{element.dob}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+</div>

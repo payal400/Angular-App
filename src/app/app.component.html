@@ -1,0 +1,23 @@
+<div class="color">
+  <header class="bg-dark p-2 text-white">
+    <app-header></app-header>
+  </header>
+  <section>
+    <app-box1></app-box1>
+    <div class="container bg-success bg-opacity-75 p-2 mb-2">
+      <h2 class="text-white">Username is <span class="text-primary">{{userName}}</span></h2>
+      <div class="row">
+        <div class="col-md-6">
+          <app-box3></app-box3>
+        </div>
+        <div class="col-md-6">
+          <app-box4></app-box4>
+        </div>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </section>
+  <footer class="bg-secondary">
+    <app-footer></app-footer>
+  </footer>
+</div>

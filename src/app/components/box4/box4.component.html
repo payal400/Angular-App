@@ -1,0 +1,9 @@
+<mat-card>
+  <h3>Username is <span class="text-primary">{{userName}}</span></h3>
+  <mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput type="text" #uname>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" style="margin-left: 7px;"
+    (click)="onChange(uname)">Change</button>
+</mat-card>
